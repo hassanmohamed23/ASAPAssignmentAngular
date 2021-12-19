@@ -1,0 +1,39 @@
+<div class="container">
+    <h3 class="text-primary mt-3">Update Address</h3>
+    <div class="col-4">
+    <form #frm="ngForm" (ngSubmit)="UpdateAddress()">
+
+        <div class="mb-1 row">
+            <label for="Country" class="col-sm-1-12 col-form-label">Country</label>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control"required [(ngModel)]="address.country" name="Country" id="Country" >
+            </div>
+        </div>
+    <div class="mb-1 row">
+        <label for="City" class="col-sm-1-12 col-form-label">City</label>
+        <div class="col-sm-1-12">
+            <input type="text" class="form-control"required  [(ngModel)]="address.city" name="City" id="City" >
+        </div>
+    </div>
+        <div class="mb-1 row">
+            <label for="Street"class="col-sm-1-12 col-form-label">Street</label>
+            <div class="col-sm-1-12">
+                <input type="text"   class="form-control" required [(ngModel)]="address.street" name="Street" id="Street" >
+            </div>
+        </div>
+        <div class="mb-1 row">
+            <label for="ZIP" class="col-sm-1-12 col-form-label">ZIP Code</label>
+            <div class="col-sm-1-12">
+                <input type="number"  class="form-control" required [(ngModel)]="address.zip"name="ZIP" id="ZIP" >
+            </div>
+        </div>
+
+        <div class="mb-5 row mt-2">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary"[disabled]="frm.invalid" >Update Address</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+

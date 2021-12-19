@@ -1,0 +1,47 @@
+<div class="container">
+    <h3 class="text-primary mt-3">Add Person</h3>
+    <div class="col-4">
+    <form #frm="ngForm" (ngSubmit)="AddPerson()">
+
+        <div class="mb-1 row">
+            <label for="firstName" class="col-sm-1-12 col-form-label">First Name</label>
+            <div class="col-sm-1-12">
+                <input type="text" class="form-control"required  [(ngModel)]="Iperson.firstName" name="firstName" id="firstName" >
+            </div>
+        </div>
+    <div class="mb-1 row">
+        <label for="lastName" class="col-sm-1-12 col-form-label">Last Name</label>
+        <div class="col-sm-1-12">
+            <input type="text" class="form-control"required  [(ngModel)]="Iperson.lastName" name="lastName" id="lastName" >
+        </div>
+    </div>
+        <div class="mb-1 row">
+            <label for="Email"class="col-sm-1-12 col-form-label">Email</label>
+            <div class="col-sm-1-12">
+                <input type="email"   class="form-control" required [(ngModel)]="Iperson.email" name="Email" id="Email" >
+            </div>
+        </div>
+        <div class="mb-1 row">
+            <label for="phone" class="col-sm-1-12 col-form-label">Phone Number</label>
+            <div class="col-sm-1-12">
+                <input type="text"  class="form-control" title="Phone number Should Be Number" required [(ngModel)]="Iperson.phone"name="phone" id="phone" >
+            </div>
+        </div>
+
+          
+        <div class="mb-1 row">
+            <label for="birthDate" class="col-sm-1-12 col-form-label">Birth Date</label>
+            <div class="col-sm-1-12">
+                <input type="date"   class="form-control"  required [(ngModel)]="Iperson.birthDate"name="birthDate" id="birthDate" >
+            </div>
+        </div>
+
+        <div class="mb-5 row mt-2">
+            <div class="offset-sm-2 col-sm-10">
+                <button type="submit" class="btn btn-primary"[disabled]="frm.invalid" >Add Person</button>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+

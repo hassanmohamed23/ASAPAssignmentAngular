@@ -1,0 +1,31 @@
+<h3 class="text-primary mt-5"> List of Person :</h3>
+<table class="table mt-2 mb-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Add Address</th>
+        <th scope="col">Details</th>
+        <th scope="col">Add</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ListOfPerson  let i = index;" >
+        <th scope="row">{{i+1}}</th>
+        <td >{{item.firstName}}</td>
+        <td >{{item.lastName}}</td>
+        <td scope="row">{{item.email}}</td>
+        <td><button type="button" class="btn btn-primary"(click)="AddAddress(item.id)">Add Address</button></td>
+        <td><button type="button" class="btn btn-primary" (click)="Details(item.id)">Details</button></td>
+        <td><button type="button" class="btn btn-primary"(click)="Add(item.id)">Add</button></td>
+        <td><button type="button" class="btn btn-primary"(click)="Update(item.id)">Update</button></td>
+        <td><button type="button" class="btn btn-primary"(click)="Delete(item.id)">Delete</button></td>
+      </tr>
+     
+   
+    </tbody>
+  </table>
